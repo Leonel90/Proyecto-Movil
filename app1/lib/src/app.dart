@@ -61,20 +61,20 @@ class _MyCountState extends State<MyCount> {
         SizedBox(
           width: 30.0,
         ),
-        FloatingActionButton(
+        ElevatedButton(
           child: Icon(Icons.restore),
           onPressed: (() {
             _count = 0;
           }),
-          tooltip: "Poner el contador en 0",
+          //tooltip: "Poner el contador en 0",
         ),
         Expanded(child: SizedBox()),
-        FloatingActionButton(
+        ElevatedButton(
           child: Icon(Icons.add),
           onPressed: (() {
             _count++;
           }),
-          tooltip: "Se incremente el valor",
+          //tooltip: "Se incremente el valor",
         )
       ],
     );

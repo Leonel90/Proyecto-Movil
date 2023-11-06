@@ -44,6 +44,39 @@ class _MyCountState extends State<MyCount> {
           ],
         ),
       ),
+      bottomNavigationBar: BottomAppBar(
+        shape: CircularNotchedRectangle(),
+        child: Container(
+          height: 20.0,
+          color: const Color.fromARGB(255, 107, 105, 240),
+        ),
+      ),
+      floatingActionButton: _crearButtoms(),
+    );
+  }
+
+  Widget _crearButtoms() {
+    return Row(
+      children: <Widget>[
+        SizedBox(
+          width: 30.0,
+        ),
+        FloatingActionButton(
+          child: Icon(Icons.restore),
+          onPressed: (() {
+            _count = 0;
+          }),
+          tooltip: "Poner el contador en 0",
+        ),
+        Expanded(child: SizedBox()),
+        FloatingActionButton(
+          child: Icon(Icons.add),
+          onPressed: (() {
+            _count++;
+          }),
+          tooltip: "Se incremente el valor",
+        )
+      ],
     );
   }
 }
